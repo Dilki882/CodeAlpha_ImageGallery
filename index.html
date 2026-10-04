@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelVault | Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        <span class="logo-icon">
+            <i class="fa-solid fa-camera"></i>
+        </span>
+        Pixel<span class="logo-highlight">Vault</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="icon-btn" id="themeToggle" title="Change Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            <span></span>
+            VISUAL STORIES
+        </div>
+
+        <h1>
+            Explore the world
+            <br>
+            <em>through images.</em>
+        </h1>
+
+        <p>
+            Discover beautiful moments, inspiring places,
+            creative people and unforgettable experiences
+            through our curated image collection.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#gallery" class="primary-btn">
+                Explore Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#categories" class="secondary-btn">
+                View Categories
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO IMAGES -->
+
+    <div class="hero-visual">
+
+        <div class="hero-image hero-image-1">
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+                alt="Nature landscape">
+        </div>
+
+        <div class="hero-image hero-image-2">
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+                alt="Beautiful beach">
+        </div>
+
+        <div class="hero-image hero-image-3">
+            <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern architecture">
+        </div>
+
+        <div class="floating-card">
+
+            <div class="floating-icon">
+                <i class="fa-solid fa-images"></i>
+            </div>
+
+            <div>
+                <strong>10+</strong>
+                <span>Curated Photos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat">
+        <strong>10+</strong>
+        <span>Images</span>
+    </div>
+
+    <div class="stat">
+        <strong>5</strong>
+        <span>Categories</span>
+    </div>
+
+    <div class="stat">
+        <strong>100%</strong>
+        <span>Responsive</span>
+    </div>
+
+    <div class="stat">
+        <strong>24/7</strong>
+        <span>Access</span>
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">OUR COLLECTION</span>
+
+            <h2>
+                Featured <em>Gallery</em>
+            </h2>
+        </div>
+
+        <p>
+            Browse our collection of carefully selected
+            photographs from different categories.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH + FILTER -->
+
+    <div class="gallery-controls">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search images..."
+            >
+
+        </div>
+
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="nature">
+                Nature
+            </button>
+
+            <button class="filter-btn" data-filter="travel">
+                Travel
+            </button>
+
+            <button class="filter-btn" data-filter="people">
+                People
+            </button>
+
+            <button class="filter-btn" data-filter="architecture">
+                Architecture
+            </button>
+
+            <button class="filter-btn" data-filter="food">
+                Food
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= GALLERY GRID ================= -->
+
+    <div class="gallery-grid" id="galleryGrid">
+
+
+        <!-- IMAGE 1 -->
+
+        <article
+            class="gallery-item large"
+            data-category="nature"
+            data-title="Mountain Escape">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+                alt="Mountain landscape"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Nature</span>
+                    <h3>Mountain Escape</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 2 -->
+
+        <article
+            class="gallery-item"
+            data-category="travel"
+            data-title="Ocean Paradise">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+                alt="Ocean paradise"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Travel</span>
+                    <h3>Ocean Paradise</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 3 -->
+
+        <article
+            class="gallery-item tall"
+            data-category="architecture"
+            data-title="Modern Architecture">
+
+            <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern building"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Architecture</span>
+                    <h3>Modern Architecture</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 4 -->
+
+        <article
+            class="gallery-item"
+            data-category="people"
+            data-title="Beautiful Portrait">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=85"
+                alt="Portrait photography"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>People</span>
+                    <h3>Beautiful Portrait</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 5 -->
+
+        <article
+            class="gallery-item"
+            data-category="food"
+            data-title="Delicious Food">
+
+            <img
+                src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=85"
+                alt="Delicious food"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Food</span>
+                    <h3>Delicious Food</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 6 -->
+
+        <article
+            class="gallery-item"
+            data-category="nature"
+            data-title="Forest Journey">
+
+            <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85"
+                alt="Forest"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Nature</span>
+                    <h3>Forest Journey</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 7 -->
+
+        <article
+            class="gallery-item large"
+            data-category="travel"
+            data-title="Adventure Destination">
+
+            <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85"
+                alt="Travel destination"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Travel</span>
+                    <h3>Adventure Destination</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 8 -->
+
+        <article
+            class="gallery-item"
+            data-category="architecture"
+            data-title="Urban Design">
+
+            <img
+                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=85"
+                alt="Urban architecture"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Architecture</span>
+                    <h3>Urban Design</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 9 -->
+
+        <article
+            class="gallery-item"
+            data-category="people"
+            data-title="Creative Portrait">
+
+            <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85"
+                alt="Creative portrait"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>People</span>
+                    <h3>Creative Portrait</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IMAGE 10 -->
+
+        <article
+            class="gallery-item"
+            data-category="food"
+            data-title="Fresh Cuisine">
+
+            <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85"
+                alt="Fresh cuisine"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>Food</span>
+                    <h3>Fresh Cuisine</h3>
+                </div>
+
+                <button class="view-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div id="noResults" style="display:none;">
+
+        <i class="fa-solid fa-image"></i>
+
+        <h3>No images found</h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories-section" id="categories">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">EXPLORE</span>
+
+            <h2>
+                Browse by <em>Category</em>
+            </h2>
+        </div>
+
+        <p>
+            Find exactly what you're looking for
+            by exploring our image categories.
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <!-- Nature -->
+
+        <div
+            class="category-card"
+            data-category="nature">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+                alt="Nature category">
+
+            <div class="category-content">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <h3>Nature</h3>
+
+                <span>Explore nature</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Travel -->
+
+        <div
+            class="category-card"
+            data-category="travel">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+                alt="Travel category">
+
+            <div class="category-content">
+
+                <i class="fa-solid fa-plane"></i>
+
+                <h3>Travel</h3>
+
+                <span>Discover places</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- People -->
+
+        <div
+            class="category-card"
+            data-category="people">
+
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=85"
+                alt="People category">
+
+            <div class="category-content">
+
+                <i class="fa-solid fa-user"></i>
+
+                <h3>People</h3>
+
+                <span>Beautiful moments</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Architecture -->
+
+        <div
+            class="category-card"
+            data-category="architecture">
+
+            <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85"
+                alt="Architecture category">
+
+            <div class="category-content">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3>Architecture</h3>
+
+                <span>Creative structures</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85"
+            alt="Nature photography">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span class="section-label">
+            ABOUT PIXELVAULT
+        </span>
+
+        <h2>
+            Every picture tells
+            <em>a story.</em>
+        </h2>
+
+        <p>
+            PixelVault is a modern image gallery created
+            to showcase beautiful photography in a clean,
+            interactive and responsive experience.
+        </p>
+
+        <p>
+            Explore different categories, search for your
+            favorite images and open photographs in our
+            immersive lightbox viewer.
+        </p>
+
+
+        <div class="about-features">
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Responsive Design</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Interactive Gallery</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Smart Filters</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Lightbox Preview</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <button
+        class="lightbox-prev"
+        id="lightboxPrev">
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="">
+
+        <div class="lightbox-info">
+
+            <div>
+
+                <span id="lightboxCategory">
+                    Category
+                </span>
+
+                <h3 id="lightboxTitle">
+                    Image Title
+                </h3>
+
+            </div>
+
+
+            <div class="lightbox-actions">
+
+                <button
+                    class="icon-btn"
+                    id="favoriteBtn"
+                    title="Favorite">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <button
+                    class="icon-btn"
+                    id="downloadBtn"
+                    title="Download">
+
+                    <i class="fa-solid fa-download"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="lightbox-next"
+        id="lightboxNext">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-camera"></i>
+                </span>
+
+                Pixel<span class="logo-highlight">
+                    Vault
+                </span>
+
+            </a>
+
+            <p>
+                Capturing moments. Creating memories.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#gallery">Gallery</a>
+
+            <a href="#categories">Categories</a>
+
+            <a href="#about">About</a>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <a href="#" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" title="Pinterest">
+                <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+
+            <a href="#" title="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 PixelVault. All rights reserved.
+        </p>
+
+        <p>
+            Designed & Developed with ❤️
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
