@@ -55,12 +55,10 @@ PixelVault/
 4. Explore the PixelVault image gallery.
 
 🌐 Live Demo
-
-["View PixelVault Live Demo"(https://dilki882.github.io/CodeAlpha_ImageGallery/)
+"https://dilki882.github.io/CodeAlpha_ImageGallery/"
 
 💻 GitHub Repository
-
-"View Source Code" (https://github.com/Dilki882/CodeAlpha_ImageGallery.git)
+"https://github.com/Dilki882/CodeAlpha_ImageGallery.git"
 
 🎓 Internship Project
 
